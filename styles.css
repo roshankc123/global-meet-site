@@ -303,6 +303,126 @@
       font-size: 0.94rem;
     }
 
+    .mini-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .mini-card li + li {
+      margin-top: 4px;
+    }
+
+    .promo-section {
+      padding: 26px 0 10px;
+    }
+
+    .promo-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .promo-card {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr auto;
+      gap: 22px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid rgba(11, 110, 243, 0.18);
+      border-left: 6px solid var(--sky);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 24px;
+    }
+
+    .computer-package {
+      grid-template-columns: 1fr 1.35fr;
+      border-left-color: var(--gold);
+    }
+
+    .promo-kicker {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--sky);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .promo-card h2 {
+      font-size: clamp(1.45rem, 2.2vw, 2rem);
+      margin-bottom: 8px;
+    }
+
+    .promo-card p {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .promo-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+      margin: 0;
+      padding-left: 18px;
+      color: #33405f;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .promo-discount {
+      min-width: 150px;
+      border-radius: 8px;
+      background: var(--gold);
+      color: #2f2200;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .promo-discount strong {
+      display: block;
+      font-family: "Sora", sans-serif;
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .promo-discount span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .package-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .package-list div {
+      border: 1px solid rgba(14, 31, 79, 0.1);
+      border-radius: 8px;
+      background: var(--mist);
+      padding: 14px;
+      text-align: center;
+    }
+
+    .package-list span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .package-list strong {
+      color: var(--ink);
+      font-family: "Sora", sans-serif;
+      font-size: 1.25rem;
+    }
+
     .section {
       padding: 58px 0;
       animation: rise 0.8s ease both;
@@ -399,6 +519,16 @@
       padding-left: 18px;
     }
 
+    .local-seo-section {
+      background: linear-gradient(180deg, rgba(238, 244, 255, 0.65), rgba(255, 255, 255, 0));
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
     .highlight-strip {
       background: linear-gradient(95deg, #fff6e7, #ebfffd);
       border: 1px solid rgba(14, 31, 79, 0.08);
@@ -476,7 +606,7 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1.1fr 1fr;
+      grid-template-columns: 1.4fr 1fr 1.1fr;
       gap: 16px;
     }
 
@@ -533,6 +663,44 @@
       text-decoration: underline;
     }
 
+    .footer-branches {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .footer-branches h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-branch-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .footer-branch {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-branch strong {
+      display: block;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .footer-branch p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
     .copyright {
       margin-top: 18px;
       padding-top: 16px;
@@ -561,6 +729,10 @@
       .course-grid,
       .branch-grid,
       .footer-grid,
+      .footer-branch-grid,
+      .promo-card,
+      .computer-package,
+      .faq-grid,
       .two-col {
         grid-template-columns: 1fr 1fr;
       }
@@ -603,9 +775,25 @@
       .course-grid,
       .branch-grid,
       .footer-grid,
+      .footer-branch-grid,
+      .promo-card,
+      .computer-package,
+      .faq-grid,
       .destination-wrap,
       .stats,
       .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .promo-list {
+        grid-template-columns: 1fr;
+      }
+
+      .promo-discount {
+        width: 100%;
+      }
+
+      .package-list {
         grid-template-columns: 1fr;
       }
 
